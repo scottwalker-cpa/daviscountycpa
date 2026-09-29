@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davis County Citizens Police Academy (DCCPA)</title>
 
-    <!-- Official DCCPA Favicon Assets -->
-    <link rel="icon" type="image/png" sizes="192x192" href="DCCPA_Seal_Trans-300x300.png">
-    <link rel="apple-touch-icon" href="DCCPA_Seal_Trans-300x300.png">
+        <!-- Official DCCPA Favicon Assets -->
+    <link rel="icon" type="image/png" sizes="192x192" href="Assets/DCCPA_Seal_Trans-300x300.png">
+    <link rel="apple-touch-icon" href="Assets/DCCPA_Seal_Trans-300x300.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -78,7 +78,7 @@
                 
                 <!-- Official Seal & Title -->
                 <a href="#hero" class="flex items-center space-x-3.5 group">
-                    <img src="DCCPA_Seal_Trans-300x300.png" 
+                    <img src="https://web.archive.org/web/20260115140319im_/https://daviscountycpa.org/wp-content/uploads/2016/05/20170816_Seal_Trans.png" 
                          alt="Davis County Citizens Police Academy Seal" 
                          class="h-14 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform"
                          onerror="this.onerror=null; this.src='https://placehold.co/100x100/0B1B3D/D4AF37?text=DCCPA';">
@@ -174,7 +174,7 @@
                     <div class="bg-slate-900/80 border border-slate-700/80 backdrop-blur-md rounded-3xl p-8 shadow-2xl text-center space-y-6 relative overflow-hidden">
                         <div class="w-32 h-32 mx-auto rounded-full gold-gradient p-1 shadow-2xl">
                             <div class="w-full h-full bg-dccpa-navy rounded-full flex items-center justify-center p-3">
-                                <img src="DCCPA_Seal_Trans-300x300.png" 
+                                <img src="https://web.archive.org/web/20260115140319im_/https://daviscountycpa.org/wp-content/uploads/2016/05/20170816_Seal_Trans.png" 
                                      alt="Seal" 
                                      class="w-full h-full object-contain"
                                      onerror="this.onerror=null; this.src='https://placehold.co/120x120/0B1B3D/D4AF37?text=DCCPA';">
@@ -287,7 +287,7 @@
                 </div>
             </div>
 
-            <!-- Interactive Training Category Cards -->
+            <!-- Interactive Training Category Tabs & Cards -->
             <div class="grid lg:grid-cols-3 gap-8" id="curriculumGrid">
                 
                 <!-- Category 1 -->
@@ -454,20 +454,38 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
-                                <strong class="text-dccpa-navy block text-sm font-bold">Background Clearance</strong>
-                                <span class="text-slate-600 text-xs">Must pass a criminal background check (no felony convictions or disqualifying criminal history).</span>
+                                <strong class="text-dccpa-navy block text-sm font-bold">Background Screening</strong>
+                                <span class="text-slate-600 text-xs">Must pass a criminal history background check (no felony convictions or disqualifying misdemeanor records).</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-sm">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <strong class="text-dccpa-navy block text-sm font-bold">$25 Registration Fee</strong>
+                                <span class="text-slate-600 text-xs">Payable upon formal acceptance into the program (includes official CPA T-Shirt & materials).</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-dccpa-navy text-white rounded-3xl p-8 border border-slate-800 shadow-xl space-y-6">
-                    <h4 class="text-xl font-bold text-dccpa-gold">Ready to Get Started?</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Ensure you have your Utah Driver's License or ID and emergency contact details ready before starting the application.
+                <!-- Callout Box -->
+                <div class="bg-dccpa-navy text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800 relative">
+                    <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center text-dccpa-navy text-xl font-extrabold mb-6 shadow-md">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Ready to Join the Class?</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Applications are processed on a rolling basis prior to each cohort start date. Completing the online application wizard below reserves your slot for background verification.
                     </p>
-                    <a href="#apply" class="block text-center gold-gradient text-dccpa-navy font-bold py-3.5 rounded-xl shadow-md hover:brightness-110 transition-all">
-                        Apply Now
+                    <div class="bg-dccpa-darkbg p-4 rounded-xl text-xs text-slate-300 border border-slate-800 space-y-1">
+                        <p class="text-dccpa-gold font-bold"><i class="fa-solid fa-info-circle mr-1"></i> Administrative Note:</p>
+                        <p>DCCPA coordination is managed via Centerville Police Department on behalf of participating agencies.</p>
+                    </div>
+                    <a href="#apply" class="mt-6 block w-full text-center gold-gradient text-dccpa-navy font-bold py-3.5 rounded-xl hover:brightness-110 transition-all text-sm shadow-lg">
+                        Proceed to Application Wizard
                     </a>
                 </div>
 
@@ -475,5 +493,594 @@
         </div>
     </section>
 
+    <!-- Application Form Wizard Section -->
+    <section id="apply" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-xs font-bold text-dccpa-gold uppercase tracking-widest mb-2">Enrollment Application</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-dccpa-navy">Academy Application Wizard</h3>
+                <p class="text-slate-600 mt-2 text-sm">Complete the 3-step form below to submit your profile for background clearance.</p>
+            </div>
+
+            <!-- Wizard Card -->
+            <div class="bg-dccpa-bg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+                
+                <!-- Wizard Header Bar -->
+                <div class="bg-dccpa-navy px-6 py-6 border-b border-slate-800 text-white">
+                    <div class="flex justify-between items-center mb-3">
+                        <span id="stepTitleText" class="text-xs sm:text-sm font-bold text-dccpa-gold uppercase tracking-wider">Step 1 of 3: Personal Information</span>
+                        <span id="stepProgressPercent" class="text-xs text-slate-400 font-mono font-bold">33% Completed</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div id="progressBar" class="gold-gradient h-full w-1/3 transition-all duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Form Content -->
+                <form id="dccpaApplicationForm" onsubmit="handleFormSubmit(event)" class="p-6 sm:p-10 space-y-6">
+                    
+                    <!-- STEP 1: Personal Details -->
+                    <div id="step1" class="form-step space-y-4">
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <div class="sm:col-span-1">
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="John">
+                            </div>
+                            <div class="sm:col-span-1">
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Middle Name</label>
+                                <input type="text" id="middleName" name="middleName" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="A.">
+                            </div>
+                            <div class="sm:col-span-1">
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="john.doe@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Primary Phone *</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="(801) 555-0199">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Date of Birth *</label>
+                                <input type="date" id="dob" name="dob" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">T-Shirt Size *</label>
+                                <select id="tshirt" name="tshirt" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm bg-white">
+                                    <option value="" disabled selected>Select size...</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="X-Large">X-Large</option>
+                                    <option value="2X-Large">2X-Large</option>
+                                    <option value="3X-Large">3X-Large</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Street Address (Davis County) *</label>
+                            <input type="text" id="address" name="address" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="123 Main St, City, ZIP">
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Background & Contacts -->
+                    <div id="step2" class="form-step hidden space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Employer or School Name</label>
+                                <input type="text" id="employer" name="employer" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="Organization / Company">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Utah Driver's License # *</label>
+                                <input type="text" id="dlNumber" name="dlNumber" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="UT DL Number">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Emergency Contact Name *</label>
+                                <input type="text" id="emergencyName" name="emergencyName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="Full Name">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Emergency Contact Phone *</label>
+                                <input type="tel" id="emergencyPhone" name="emergencyPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="(801) 555-0199">
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 space-y-3">
+                            <h5 class="text-xs font-bold uppercase tracking-wider text-dccpa-navy">Criminal Background Disclosures</h5>
+                            
+                            <div>
+                                <label class="block text-xs text-slate-700 font-medium mb-1">Have you ever been convicted of a felony? *</label>
+                                <div class="flex space-x-6 text-sm">
+                                    <label class="flex items-center space-x-2"><input type="radio" name="felony" value="No" checked class="text-dccpa-navy focus:ring-dccpa-gold"> <span>No</span></label>
+                                    <label class="flex items-center space-x-2"><input type="radio" name="felony" value="Yes" class="text-dccpa-navy focus:ring-dccpa-gold"> <span>Yes</span></label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs text-slate-700 font-medium mb-1">Have you been convicted of a Class A or B misdemeanor in the past 5 years? *</label>
+                                <div class="flex space-x-6 text-sm">
+                                    <label class="flex items-center space-x-2"><input type="radio" name="misdemeanor" value="No" checked class="text-dccpa-navy focus:ring-dccpa-gold"> <span>No</span></label>
+                                    <label class="flex items-center space-x-2"><input type="radio" name="misdemeanor" value="Yes" class="text-dccpa-navy focus:ring-dccpa-gold"> <span>Yes</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Statement & Consent -->
+                    <div id="step3" class="form-step hidden space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Statement of Interest *</label>
+                            <textarea id="motivation" name="motivation" rows="3" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm" placeholder="Why would you like to participate in the Davis County Citizens Police Academy?"></textarea>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="checkbox" id="consentBg" required class="mt-1 h-4 w-4 rounded border-slate-300 text-dccpa-navy focus:ring-dccpa-gold">
+                                <span class="text-xs text-slate-600 leading-normal">
+                                    I certify that all statements made are true, and I consent to a background check conducted by the DCCPA / Centerville Police Department prior to admission. *
+                                </span>
+                            </label>
+
+                            <label class="flex items-start space-x-3 cursor-pointer">
+                                <input type="checkbox" id="consentFee" required class="mt-1 h-4 w-4 rounded border-slate-300 text-dccpa-navy focus:ring-dccpa-gold">
+                                <span class="text-xs text-slate-600 leading-normal">
+                                    I understand that a $25 registration fee (covering my academy T-shirt and course supplies) will be due upon formal acceptance into the program. *
+                                </span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Digital Signature (Type Full Legal Name) *</label>
+                            <input type="text" id="signature" name="signature" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm font-serif" placeholder="Signature">
+                        </div>
+                    </div>
+
+                    <!-- Form Buttons -->
+                    <div class="flex justify-between items-center pt-6 border-t border-slate-200">
+                        <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden px-6 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-bold text-xs hover:bg-slate-100 transition-colors">
+                            <i class="fa-solid fa-chevron-left mr-2"></i> Previous Step
+                        </button>
+                        <div class="ml-auto">
+                            <button type="button" id="nextBtn" onclick="changeStep(1)" class="gold-gradient text-dccpa-navy font-bold px-8 py-3 rounded-xl hover:brightness-110 transition-all text-sm shadow-md">
+                                Next Step <i class="fa-solid fa-chevron-right ml-2"></i>
+                            </button>
+                            <button type="submit" id="submitBtn" class="hidden gold-gradient text-dccpa-navy font-bold px-8 py-3 rounded-xl hover:brightness-110 transition-all text-sm shadow-md">
+                                Submit Application <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Contact Section -->
+    <section id="faq" class="py-20 bg-dccpa-bg border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- FAQ Accordion (Left) -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div>
+                        <h2 class="text-xs font-bold text-dccpa-gold uppercase tracking-widest mb-2">Helpful Information</h2>
+                        <h3 class="text-3xl font-black text-dccpa-navy mb-6">Frequently Asked Questions</h3>
+                    </div>
+
+                    <div class="space-y-3" id="faqAccordion">
+                        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                            <button class="w-full text-left px-6 py-4 font-bold text-dccpa-navy text-sm flex justify-between items-center hover:bg-slate-50" onclick="toggleFaq(1)">
+                                <span>What is the $25 registration fee used for?</span>
+                                <i class="fa-solid fa-chevron-down text-slate-400" id="faqIcon-1"></i>
+                            </button>
+                            <div class="hidden px-6 py-4 border-t border-slate-100 text-xs text-slate-600 leading-relaxed bg-slate-50" id="faqContent-1">
+                                The non-refundable $25 registration fee is payable upon acceptance and directly covers your official Citizens Police Academy T-shirt, course binder, and student training materials.
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                            <button class="w-full text-left px-6 py-4 font-bold text-dccpa-navy text-sm flex justify-between items-center hover:bg-slate-50" onclick="toggleFaq(2)">
+                                <span>Does graduating give me police or law enforcement authority?</span>
+                                <i class="fa-solid fa-chevron-down text-slate-400" id="faqIcon-2"></i>
+                            </button>
+                            <div class="hidden px-6 py-4 border-t border-slate-100 text-xs text-slate-600 leading-relaxed bg-slate-50" id="faqContent-2">
+                                No. The Citizens Police Academy is an educational civic program designed to increase public transparency and understanding. It does not grant law enforcement authority or POST peace officer certification.
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                            <button class="w-full text-left px-6 py-4 font-bold text-dccpa-navy text-sm flex justify-between items-center hover:bg-slate-50" onclick="toggleFaq(3)">
+                                <span>What is the required attire during sessions?</span>
+                                <i class="fa-solid fa-chevron-down text-slate-400" id="faqIcon-3"></i>
+                            </button>
+                            <div class="hidden px-6 py-4 border-t border-slate-100 text-xs text-slate-600 leading-relaxed bg-slate-50" id="faqContent-3">
+                                Casual, comfortable clothing (jeans/khakis and closed-toe footwear) is standard. Your CPA T-shirt will be worn for group activities and range/EVOC demonstration days.
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                            <button class="w-full text-left px-6 py-4 font-bold text-dccpa-navy text-sm flex justify-between items-center hover:bg-slate-50" onclick="toggleFaq(4)">
+                                <span>What if I am forced to miss a week?</span>
+                                <i class="fa-solid fa-chevron-down text-slate-400" id="faqIcon-4"></i>
+                            </button>
+                            <div class="hidden px-6 py-4 border-t border-slate-100 text-xs text-slate-600 leading-relaxed bg-slate-50" id="faqContent-4">
+                                Attendance at weekly sessions is essential. To earn a graduation certificate, students are allowed no more than two excused absences over the 15-week duration.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact & Location Box (Right) -->
+                <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold text-dccpa-gold uppercase tracking-widest mb-1">Administrative Contact</h2>
+                        <h3 class="text-2xl font-black text-dccpa-navy">Centerville Police Department</h3>
+                        <p class="text-xs text-slate-500 mt-1">Coordinating Headquarters for DCCPA</p>
+                    </div>
+
+                    <div class="space-y-4 text-xs">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-dccpa-navy text-dccpa-gold rounded-lg flex items-center justify-center flex-shrink-0 font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong class="text-dccpa-navy block font-bold">Address</strong>
+                                <span class="text-slate-600">Centerville Police Department<br>225 N Main St, Centerville, UT 84014</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-dccpa-navy text-dccpa-gold rounded-lg flex items-center justify-center flex-shrink-0 font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong class="text-dccpa-navy block font-bold">Phone Number</strong>
+                                <span class="text-slate-600">(801) 292-8441</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Image Canvas -->
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-200 h-48 bg-slate-800 flex items-center justify-center group cursor-pointer" onclick="copyContactAddress()">
+                        <img src="https://placehold.co/600x300/0B1B3D/D4AF37?text=Centerville+PD+%2B+Davis+County+Map" alt="Map Location" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform">
+                        <div class="absolute inset-0 bg-dccpa-navy/60 flex items-center justify-center p-4 text-center">
+                            <div>
+                                <i class="fa-solid fa-map-pin text-dccpa-gold text-2xl mb-1"></i>
+                                <span class="block text-white font-bold text-xs">Click to Copy Address</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dccpa-darkbg text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://web.archive.org/web/20260115140319im_/https://daviscountycpa.org/wp-content/uploads/2016/05/20170816_Seal_Trans.png" 
+                             alt="Seal" class="h-10 w-auto"
+                             onerror="this.onerror=null; this.src='https://placehold.co/80x80/0B1B3D/D4AF37?text=DCCPA';">
+                        <span class="text-base font-extrabold text-white tracking-tight">Davis County Citizens Police Academy</span>
+                    </div>
+                    <p class="text-slate-400 max-w-sm leading-relaxed">
+                        Dedicated to strengthening bonds between Davis County law enforcement professionals and community members through interactive education and transparency.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-white uppercase tracking-wider mb-3">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-dccpa-gold transition-colors">About Academy</a></li>
+                        <li><a href="#curriculum" class="hover:text-dccpa-gold transition-colors">15-Week Curriculum</a></li>
+                        <li><a href="#agencies" class="hover:text-dccpa-gold transition-colors">Participating Agencies</a></li>
+                        <li><a href="#apply" class="hover:text-dccpa-gold transition-colors">Submit Application</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-white uppercase tracking-wider mb-3">Emergency Notice</h5>
+                    <p class="text-slate-400 mb-2">For immediate police assistance or active crime in progress:</p>
+                    <span class="inline-block bg-red-600/20 border border-red-500/50 text-red-400 font-black px-3 py-1.5 rounded-lg text-xs">
+                        DIAL 911 IMMEDIATELY
+                    </span>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/80 pt-6 text-center md:flex md:justify-between text-slate-500">
+                <p>&copy; 2026 Davis County Citizens Police Academy (DCCPA). All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Administered via Centerville Police Department</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Submission Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-dccpa-darkbg/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl border border-slate-200">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl font-bold">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-dccpa-navy">Application Received!</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+                Thank you for applying to the Davis County Citizens Police Academy. Your application profile has been submitted for background clearance.
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl text-xs text-slate-600 text-left border border-slate-200">
+                <strong class="text-dccpa-navy block mb-1">What Happens Next?</strong>
+                <ul class="list-disc ml-4 space-y-1">
+                    <li>Background verification takes 5-7 business days.</li>
+                    <li>Accepted candidates will receive notification via email with $25 registration payment instructions.</li>
+                </ul>
+            </div>
+            <button onclick="closeSuccessModal()" class="w-full gold-gradient text-dccpa-navy font-bold py-3 rounded-xl hover:brightness-110 transition-all text-xs">
+                Return to Homepage
+            </button>
+        </div>
+    </div>
+
+    <!-- Admin Setup Guide Modal (Google Sheets / Apps Script Integration Instructions) -->
+    <div id="setupGuideModal" class="fixed inset-0 bg-dccpa-darkbg/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-2xl w-full text-left space-y-4 shadow-2xl border border-slate-200 max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                <h3 class="text-xl font-bold text-dccpa-navy"><i class="fa-solid fa-table text-dccpa-gold mr-2"></i> Google Sheets & Email Backend Integration</h3>
+                <button onclick="closeSetupGuideModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+            </div>
+
+            <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
+                <p>To connect this form directly to a Google Sheet database and receive automatic email alerts for every submission, follow these simple steps:</p>
+                
+                <ol class="list-decimal ml-5 space-y-2">
+                    <li>Create a new <strong>Google Sheet</strong> in your Google Workspace / Drive.</li>
+                    <li>Click <strong>Extensions &gt; Apps Script</strong> in the top menu of the Google Sheet.</li>
+                    <li>Paste the lightweight script below into `Code.gs`:</li>
+                </ol>
+
+                <div class="bg-slate-900 text-emerald-400 p-3 rounded-xl font-mono text-[11px] overflow-x-auto border border-slate-800">
+<pre>function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = e.parameter;
+  sheet.appendRow([
+    new Date(), data.firstName, data.lastName, data.email, 
+    data.phone, data.dob, data.address, data.tshirt, 
+    data.employer, data.dlNumber, data.emergencyName, 
+    data.emergencyPhone, data.felony, data.misdemeanor, 
+    data.motivation, data.signature
+  ]);
+  
+  // Send instant admin email alert
+  MailApp.sendEmail({
+    to: "admin@daviscountycpa.org",
+    subject: "New DCCPA Application: " + data.firstName + " " + data.lastName,
+    body: "New applicant registered: " + data.firstName + " " + data.lastName + " (" + data.email + ")"
+  });
+
+  return ContentService.createTextOutput(JSON.stringify({"result": "success"})).setMimeType(ContentService.MimeType.JSON);
+}</pre>
+                </div>
+
+                <ol start="4" class="list-decimal ml-5 space-y-2">
+                    <li>Click <strong>Deploy &gt; New deployment</strong> in Apps Script.</li>
+                    <li>Select Type: <strong>Web app</strong>, set <i>Who has access</i> to <strong>Anyone</strong>, and click <strong>Deploy</strong>.</li>
+                    <li>Copy the generated <strong>Web App URL</strong> and set it inside JS variable `GOOGLE_SHEET_APP_URL` on line ~700 of this HTML file!</li>
+                </ol>
+            </div>
+
+            <div class="pt-2 text-right">
+                <button onclick="closeSetupGuideModal()" class="bg-dccpa-navy text-white px-5 py-2.5 rounded-xl font-bold text-xs">Close Instructions</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional Google Apps Script Web App Endpoint URL (Replace with your deployed URL)
+        const GOOGLE_SHEET_APP_URL = ""; 
+
+        // Participating Agencies Data Structure
+        const agenciesData = [
+            { name: "Centerville Police", category: "city", role: "Host Administrative Agency & Patrol Ops", icon: "fa-building-shield" },
+            { name: "Bountiful Police", category: "city", role: "K9 Demos & Field Operations", icon: "fa-shield-halved" },
+            { name: "Clearfield Police", category: "city", role: "Patrol & Traffic Stop Simulations", icon: "fa-car" },
+            { name: "Clinton Police", category: "city", role: "Community Policing & School Safety", icon: "fa-user-shield" },
+            { name: "Farmington Police", category: "city", role: "Tactical & Patrol Support", icon: "fa-building" },
+            { name: "Kaysville Police", category: "city", role: "Investigations & Forensics", icon: "fa-fingerprint" },
+            { name: "Layton Police", category: "city", role: "SWAT, Negotiators & Range Ops", icon: "fa-person-rifle" },
+            { name: "Syracuse Police", category: "city", role: "Traffic Safety & EVOC Driving", icon: "fa-gauge-high" },
+            { name: "West Bountiful Police", category: "city", role: "Patrol Operations & SAR Support", icon: "fa-car-side" },
+            { name: "Davis County Sheriff", category: "county", role: "Jail Tour, Search & Rescue, Patrol", icon: "fa-star" },
+            { name: "Davis County Attorney", category: "county", role: "Prosecution & Judicial Overview", icon: "fa-scale-balanced" },
+            { name: "South Davis Metro Fire", category: "fire", role: "EMS Operations & Technical Rescue", icon: "fa-fire-extinguisher" }
+        ];
+
+        let currentStep = 1;
+
+        window.onload = function() {
+            renderAgencies('all');
+            setupMobileMenu();
+        };
+
+        // Render Participating Agencies Grid
+        function renderAgencies(filter) {
+            const grid = document.getElementById('agenciesGrid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? agenciesData 
+                : agenciesData.filter(a => a.category === filter);
+
+            filtered.forEach(agency => {
+                const card = document.createElement('div');
+                card.className = "bg-dccpa-bg rounded-2xl p-5 border border-slate-200 hover:border-dccpa-gold transition-all shadow-sm space-y-2";
+                card.innerHTML = `
+                    <div class="w-10 h-10 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-lg mb-2">
+                        <i class="fa-solid ${agency.icon}"></i>
+                    </div>
+                    <h5 class="font-bold text-dccpa-navy text-sm">${agency.name}</h5>
+                    <p class="text-xs text-slate-500 leading-snug">${agency.role}</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Agencies Tabs
+        function filterAgencies(category) {
+            const tabs = ['all', 'city', 'county', 'fire'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === category) {
+                    btn.className = "agency-tab bg-dccpa-navy text-white px-5 py-2 rounded-xl text-xs font-bold transition-all shadow-sm";
+                } else {
+                    btn.className = "agency-tab bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2 rounded-xl text-xs font-bold transition-all";
+                }
+            });
+            renderAgencies(category);
+        }
+
+        // Application Wizard Step Navigation
+        function changeStep(delta) {
+            const newStep = currentStep + delta;
+            if (newStep < 1 || newStep > 3) return;
+
+            // Validate current step before proceeding forward
+            if (delta > 0) {
+                const currentStepEl = document.getElementById(`step${currentStep}`);
+                const inputs = currentStepEl.querySelectorAll('input[required], select[required], textarea[required]');
+                let valid = true;
+                inputs.forEach(input => {
+                    if (!input.checkValidity()) {
+                        input.reportValidity();
+                        valid = false;
+                    }
+                });
+                if (!valid) return;
+            }
+
+            document.getElementById(`step${currentStep}`).classList.add('hidden');
+            document.getElementById(`step${newStep}`).classList.remove('hidden');
+
+            currentStep = newStep;
+
+            // Progress Indicators
+            const titles = [
+                "Step 1 of 3: Personal Information",
+                "Step 2 of 3: Employment & Background Disclosures",
+                "Step 3 of 3: Statement of Intent & Authorization"
+            ];
+            const percentages = ["33%", "66%", "100%"];
+
+            document.getElementById('stepTitleText').innerText = titles[currentStep - 1];
+            document.getElementById('stepProgressPercent').innerText = `${percentages[currentStep - 1]} Completed`;
+            document.getElementById('progressBar').style.width = percentages[currentStep - 1];
+
+            // Toggle Controls
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (currentStep === 1) prevBtn.classList.add('hidden');
+            else prevBtn.classList.remove('hidden');
+
+            if (currentStep === 3) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+        }
+
+        // Form Submission Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            // If Google Apps Script Web App URL is configured, transmit payload asynchronously
+            if (GOOGLE_SHEET_APP_URL && GOOGLE_SHEET_APP_URL.trim() !== "") {
+                const formData = new FormData(document.getElementById('dccpaApplicationForm'));
+                fetch(GOOGLE_SHEET_APP_URL, {
+                    method: 'POST',
+                    body: formData
+                }).then(res => console.log('Transmitted to Google Sheet database.'))
+                  .catch(err => console.error('Sheet posting notice:', err));
+            }
+
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            document.getElementById('dccpaApplicationForm').reset();
+            currentStep = 3;
+            changeStep(-2); // Reset back to step 1
+        }
+
+        // FAQ Toggle
+        function toggleFaq(idx) {
+            const content = document.getElementById(`faqContent-${idx}`);
+            const icon = document.getElementById(`faqIcon-${idx}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Mobile Nav Drawer Toggle
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const links = document.querySelectorAll('.mobile-nav-link');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            links.forEach(l => {
+                l.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Modals
+        function openSetupGuideModal() {
+            document.getElementById('setupGuideModal').classList.remove('hidden');
+        }
+        function closeSetupGuideModal() {
+            document.getElementById('setupGuideModal').classList.add('hidden');
+        }
+
+        // Copy Address Helper
+        function copyContactAddress() {
+            const text = "Centerville Police Department, 225 N Main St, Centerville, UT 84014";
+            const input = document.createElement("input");
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand("copy");
+            document.body.removeChild(input);
+
+            const toast = document.createElement("div");
+            toast.className = "fixed bottom-6 right-6 bg-dccpa-gold text-dccpa-navy px-4 py-3 rounded-xl shadow-2xl font-bold text-xs z-50";
+            toast.innerHTML = "<i class='fa-solid fa-check mr-2'></i> Centerville PD address copied!";
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+    </script>
 </body>
 </html>
