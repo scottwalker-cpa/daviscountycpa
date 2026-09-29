@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davis County Citizens Police Academy (DCCPA)</title>
+    <meta name="description" content="A 15-week civic program giving Davis County, Utah residents a behind-the-scenes look at local police, fire, dispatch, and the justice system. Apply online.">
+    <link rel="canonical" href="https://daviscountycpa.com/">
+    <meta name="theme-color" content="#0B1B3D">
+
+    <!-- Social sharing previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Davis County Citizens Police Academy">
+    <meta property="og:title" content="Davis County Citizens Police Academy (DCCPA)">
+    <meta property="og:description" content="15 weeks behind the scenes with Davis County police, fire, dispatch, and the justice system. Applications are open.">
+    <meta property="og:url" content="https://daviscountycpa.com/">
+    <meta property="og:image" content="https://daviscountycpa.com/Assets/DCCPA_Seal_Trans-300x300.png">
+    <meta name="twitter:card" content="summary">
 
         <!-- Official DCCPA Favicon Assets -->
     <link rel="icon" type="image/png" sizes="192x192" href="Assets/DCCPA_Seal_Trans-300x300.png">
@@ -11,13 +23,6 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Google Font: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
@@ -40,6 +45,12 @@
         }
     </script>
 
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         .gold-gradient {
             background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
@@ -51,6 +62,7 @@
             background: radial-gradient(circle at center, rgba(11, 27, 61, 0.75) 0%, rgba(6, 15, 35, 0.95) 100%);
         }
     </style>
+
 </head>
 <body class="bg-dccpa-bg text-slate-800 font-sans antialiased selection:bg-dccpa-gold selection:text-dccpa-navy">
 
@@ -64,9 +76,6 @@
             </div>
             <div class="flex items-center space-x-4 font-medium">
                 <span class="text-dccpa-gold"><i class="fa-solid fa-circle-check mr-1"></i> Applications Open</span>
-                <button onclick="openSetupGuideModal()" class="text-slate-400 hover:text-white underline text-xs">
-                    <i class="fa-solid fa-gear mr-1"></i> Admin Backend Setup
-                </button>
             </div>
         </div>
     </div>
@@ -78,10 +87,9 @@
                 
                 <!-- Official Seal & Title -->
                 <a href="#hero" class="flex items-center space-x-3.5 group">
-                    <img src="https://web.archive.org/web/20260115140319im_/https://daviscountycpa.org/wp-content/uploads/2016/05/20170816_Seal_Trans.png" 
+                    <img src="Assets/DCCPA_Seal_Trans-300x300.png" 
                          alt="Davis County Citizens Police Academy Seal" 
-                         class="h-14 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform"
-                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/0B1B3D/D4AF37?text=DCCPA';">
+                         class="h-14 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform">
                     <div>
                         <span class="block text-lg font-extrabold tracking-tight text-white leading-tight">DAVIS COUNTY</span>
                         <span class="block text-xs font-semibold text-dccpa-gold tracking-wider uppercase">Citizens Police Academy</span>
@@ -174,10 +182,9 @@
                     <div class="bg-slate-900/80 border border-slate-700/80 backdrop-blur-md rounded-3xl p-8 shadow-2xl text-center space-y-6 relative overflow-hidden">
                         <div class="w-32 h-32 mx-auto rounded-full gold-gradient p-1 shadow-2xl">
                             <div class="w-full h-full bg-dccpa-navy rounded-full flex items-center justify-center p-3">
-                                <img src="https://web.archive.org/web/20260115140319im_/https://daviscountycpa.org/wp-content/uploads/2016/05/20170816_Seal_Trans.png" 
+                                <img src="Assets/DCCPA_Seal_Trans-300x300.png" 
                                      alt="Seal" 
-                                     class="w-full h-full object-contain"
-                                     onerror="this.onerror=null; this.src='https://placehold.co/120x120/0B1B3D/D4AF37?text=DCCPA';">
+                                     class="w-full h-full object-contain">
                             </div>
                         </div>
 
@@ -517,7 +524,12 @@
                 </div>
 
                 <!-- Form Content -->
-                <form id="dccpaApplicationForm" onsubmit="handleFormSubmit(event)" class="p-6 sm:p-10 space-y-6">
+                <form id="dccpaApplicationForm" onsubmit="handleFormSubmit(event)" class="p-6 sm:p-10 space-y-6" novalidate>
+                    <!-- Spam trap: hidden from people, bots tend to fill it in -->
+                    <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+                        <label for="website">Leave this field empty</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
                     
                     <!-- STEP 1: Personal Details -->
                     <div id="step1" class="form-step space-y-4">
@@ -626,14 +638,14 @@
 
                         <div class="space-y-3 pt-2">
                             <label class="flex items-start space-x-3 cursor-pointer">
-                                <input type="checkbox" id="consentBg" required class="mt-1 h-4 w-4 rounded border-slate-300 text-dccpa-navy focus:ring-dccpa-gold">
+                                <input type="checkbox" id="consentBg" name="consentBackground" value="Yes" required class="mt-1 h-4 w-4 rounded border-slate-300 text-dccpa-navy focus:ring-dccpa-gold">
                                 <span class="text-xs text-slate-600 leading-normal">
                                     I certify that all statements made are true, and I consent to a background check conducted by the DCCPA / Centerville Police Department prior to admission. *
                                 </span>
                             </label>
 
                             <label class="flex items-start space-x-3 cursor-pointer">
-                                <input type="checkbox" id="consentFee" required class="mt-1 h-4 w-4 rounded border-slate-300 text-dccpa-navy focus:ring-dccpa-gold">
+                                <input type="checkbox" id="consentFee" name="consentFee" value="Yes" required class="mt-1 h-4 w-4 rounded border-slate-300 text-dccpa-navy focus:ring-dccpa-gold">
                                 <span class="text-xs text-slate-600 leading-normal">
                                     I understand that a $25 registration fee (covering my academy T-shirt and course supplies) will be due upon formal acceptance into the program. *
                                 </span>
@@ -644,6 +656,17 @@
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Digital Signature (Type Full Legal Name) *</label>
                             <input type="text" id="signature" name="signature" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-dccpa-gold focus:outline-none text-slate-900 text-sm font-serif" placeholder="Signature">
                         </div>
+
+                        <p class="text-[11px] text-slate-500 leading-relaxed bg-slate-50 border border-slate-200 rounded-xl p-3">
+                            <i class="fa-solid fa-lock text-dccpa-gold mr-1"></i>
+                            <strong class="text-slate-700">Privacy:</strong> Your information is used only to process your application and background check. It is shared only with DCCPA coordinators at participating agencies and is not sold or used for any other purpose.
+                        </p>
+                    </div>
+
+                    <!-- Submission error -->
+                    <div id="formError" role="alert" class="hidden bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl p-4">
+                        <strong class="block mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Your application was not sent.</strong>
+                        <span id="formErrorText">Please try again in a few minutes. If the problem continues, call the Centerville Police Department at <a href="tel:+18012928441" class="underline font-bold">(801) 292-8441</a>.</span>
                     </div>
 
                     <!-- Form Buttons -->
@@ -746,20 +769,22 @@
                             </div>
                             <div>
                                 <strong class="text-dccpa-navy block font-bold">Phone Number</strong>
-                                <span class="text-slate-600">(801) 292-8441</span>
+                                <a href="tel:+18012928441" class="text-slate-600 hover:text-dccpa-navy underline decoration-dotted">(801) 292-8441</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Map Image Canvas -->
-                    <div class="relative rounded-2xl overflow-hidden border border-slate-200 h-48 bg-slate-800 flex items-center justify-center group cursor-pointer" onclick="copyContactAddress()">
-                        <img src="https://placehold.co/600x300/0B1B3D/D4AF37?text=Centerville+PD+%2B+Davis+County+Map" alt="Map Location" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform">
-                        <div class="absolute inset-0 bg-dccpa-navy/60 flex items-center justify-center p-4 text-center">
-                            <div>
-                                <i class="fa-solid fa-map-pin text-dccpa-gold text-2xl mb-1"></i>
-                                <span class="block text-white font-bold text-xs">Click to Copy Address</span>
-                            </div>
-                        </div>
+                    <!-- Map -->
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 h-56 bg-slate-100">
+                        <iframe title="Map to Centerville Police Department" src="https://maps.google.com/maps?q=225%20N%20Main%20St%2C%20Centerville%2C%20UT%2084014&z=15&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=225+N+Main+St,+Centerville,+UT+84014" target="_blank" rel="noopener" class="text-center bg-dccpa-navy text-white font-bold py-3 rounded-xl text-xs hover:brightness-125 transition-all">
+                            <i class="fa-solid fa-diamond-turn-right mr-1.5 text-dccpa-gold"></i> Get Directions
+                        </a>
+                        <button type="button" onclick="copyContactAddress()" class="bg-slate-100 text-dccpa-navy font-bold py-3 rounded-xl text-xs hover:bg-slate-200 transition-all">
+                            <i class="fa-regular fa-copy mr-1.5"></i> Copy Address
+                        </button>
                     </div>
                 </div>
 
@@ -773,9 +798,8 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="md:col-span-2 space-y-3">
                     <div class="flex items-center space-x-3">
-                        <img src="https://web.archive.org/web/20260115140319im_/https://daviscountycpa.org/wp-content/uploads/2016/05/20170816_Seal_Trans.png" 
-                             alt="Seal" class="h-10 w-auto"
-                             onerror="this.onerror=null; this.src='https://placehold.co/80x80/0B1B3D/D4AF37?text=DCCPA';">
+                        <img src="Assets/DCCPA_Seal_Trans-300x300.png" 
+                             alt="Seal" class="h-10 w-auto">
                         <span class="text-base font-extrabold text-white tracking-tight">Davis County Citizens Police Academy</span>
                     </div>
                     <p class="text-slate-400 max-w-sm leading-relaxed">
@@ -832,62 +856,10 @@
         </div>
     </div>
 
-    <!-- Admin Setup Guide Modal (Google Sheets / Apps Script Integration Instructions) -->
-    <div id="setupGuideModal" class="fixed inset-0 bg-dccpa-darkbg/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-2xl w-full text-left space-y-4 shadow-2xl border border-slate-200 max-h-[85vh] overflow-y-auto">
-            <div class="flex justify-between items-center border-b border-slate-200 pb-3">
-                <h3 class="text-xl font-bold text-dccpa-navy"><i class="fa-solid fa-table text-dccpa-gold mr-2"></i> Google Sheets & Email Backend Integration</h3>
-                <button onclick="closeSetupGuideModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
-            </div>
-
-            <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
-                <p>To connect this form directly to a Google Sheet database and receive automatic email alerts for every submission, follow these simple steps:</p>
-                
-                <ol class="list-decimal ml-5 space-y-2">
-                    <li>Create a new <strong>Google Sheet</strong> in your Google Workspace / Drive.</li>
-                    <li>Click <strong>Extensions &gt; Apps Script</strong> in the top menu of the Google Sheet.</li>
-                    <li>Paste the lightweight script below into `Code.gs`:</li>
-                </ol>
-
-                <div class="bg-slate-900 text-emerald-400 p-3 rounded-xl font-mono text-[11px] overflow-x-auto border border-slate-800">
-<pre>function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = e.parameter;
-  sheet.appendRow([
-    new Date(), data.firstName, data.lastName, data.email, 
-    data.phone, data.dob, data.address, data.tshirt, 
-    data.employer, data.dlNumber, data.emergencyName, 
-    data.emergencyPhone, data.felony, data.misdemeanor, 
-    data.motivation, data.signature
-  ]);
-  
-  // Send instant admin email alert
-  MailApp.sendEmail({
-    to: "admin@daviscountycpa.org",
-    subject: "New DCCPA Application: " + data.firstName + " " + data.lastName,
-    body: "New applicant registered: " + data.firstName + " " + data.lastName + " (" + data.email + ")"
-  });
-
-  return ContentService.createTextOutput(JSON.stringify({"result": "success"})).setMimeType(ContentService.MimeType.JSON);
-}</pre>
-                </div>
-
-                <ol start="4" class="list-decimal ml-5 space-y-2">
-                    <li>Click <strong>Deploy &gt; New deployment</strong> in Apps Script.</li>
-                    <li>Select Type: <strong>Web app</strong>, set <i>Who has access</i> to <strong>Anyone</strong>, and click <strong>Deploy</strong>.</li>
-                    <li>Copy the generated <strong>Web App URL</strong> and set it inside JS variable `GOOGLE_SHEET_APP_URL` on line ~700 of this HTML file!</li>
-                </ol>
-            </div>
-
-            <div class="pt-2 text-right">
-                <button onclick="closeSetupGuideModal()" class="bg-dccpa-navy text-white px-5 py-2.5 rounded-xl font-bold text-xs">Close Instructions</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Optional Google Apps Script Web App Endpoint URL (Replace with your deployed URL)
-        const GOOGLE_SHEET_APP_URL = ""; 
+        // Google Apps Script Web App URL (see apps-script/SETUP.md).
+        // Paste the URL from Deploy > Manage deployments between the quotes.
+        const GOOGLE_SHEET_APP_URL = "";
 
         // Participating Agencies Data Structure
         const agenciesData = [
@@ -1003,20 +975,53 @@
         }
 
         // Form Submission Handler
-        function handleFormSubmit(e) {
+        async function handleFormSubmit(e) {
             e.preventDefault();
+            const form = document.getElementById('dccpaApplicationForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const errorBox = document.getElementById('formError');
+            errorBox.classList.add('hidden');
 
-            // If Google Apps Script Web App URL is configured, transmit payload asynchronously
-            if (GOOGLE_SHEET_APP_URL && GOOGLE_SHEET_APP_URL.trim() !== "") {
-                const formData = new FormData(document.getElementById('dccpaApplicationForm'));
-                fetch(GOOGLE_SHEET_APP_URL, {
-                    method: 'POST',
-                    body: formData
-                }).then(res => console.log('Transmitted to Google Sheet database.'))
-                  .catch(err => console.error('Sheet posting notice:', err));
+            // Validate the final step (earlier steps were checked by Next Step)
+            const step3Inputs = document.getElementById('step3').querySelectorAll('input[required], textarea[required]');
+            for (const input of step3Inputs) {
+                if (!input.checkValidity()) { input.reportValidity(); return; }
             }
 
-            document.getElementById('successModal').classList.remove('hidden');
+            if (!GOOGLE_SHEET_APP_URL) {
+                showFormError('Online applications are temporarily unavailable. Please call the Centerville Police Department at <a href="tel:+18012928441" class="underline font-bold">(801) 292-8441</a> to apply.');
+                return;
+            }
+
+            const originalLabel = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70', 'cursor-wait');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...';
+
+            try {
+                // URL-encoded body = "simple" CORS request, so no preflight to Apps Script
+                const body = new URLSearchParams(new FormData(form));
+                const res = await fetch(GOOGLE_SHEET_APP_URL, { method: 'POST', body });
+                const data = await res.json().catch(() => ({}));
+                if (!res.ok || data.result !== 'success') {
+                    throw new Error(data.message || `HTTP ${res.status}`);
+                }
+                document.getElementById('successModal').classList.remove('hidden');
+            } catch (err) {
+                console.error('Application submission failed:', err);
+                showFormError('Please check your connection and try again. If the problem continues, call the Centerville Police Department at <a href="tel:+18012928441" class="underline font-bold">(801) 292-8441</a>.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-wait');
+                submitBtn.innerHTML = originalLabel;
+            }
+        }
+
+        function showFormError(html) {
+            document.getElementById('formErrorText').innerHTML = html;
+            const box = document.getElementById('formError');
+            box.classList.remove('hidden');
+            box.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         function closeSuccessModal() {
@@ -1057,23 +1062,20 @@
             });
         }
 
-        // Modals
-        function openSetupGuideModal() {
-            document.getElementById('setupGuideModal').classList.remove('hidden');
-        }
-        function closeSetupGuideModal() {
-            document.getElementById('setupGuideModal').classList.add('hidden');
-        }
 
         // Copy Address Helper
         function copyContactAddress() {
             const text = "Centerville Police Department, 225 N Main St, Centerville, UT 84014";
-            const input = document.createElement("input");
-            input.value = text;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand("copy");
-            document.body.removeChild(input);
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text);
+            } else {
+                const input = document.createElement("input");
+                input.value = text;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand("copy");
+                document.body.removeChild(input);
+            }
 
             const toast = document.createElement("div");
             toast.className = "fixed bottom-6 right-6 bg-dccpa-gold text-dccpa-navy px-4 py-3 rounded-xl shadow-2xl font-bold text-xs z-50";
