@@ -21,29 +21,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="Assets/DCCPA_Seal_Trans-300x300.png">
     <link rel="apple-touch-icon" href="Assets/DCCPA_Seal_Trans-300x300.png">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        dccpa: {
-                            navy: '#0B1B3D',      // Deep Law Enforcement Navy
-                            slate: '#2C3E50',     // Steel / Slate Gray
-                            gold: '#D4AF37',      // Badge Gold Accent
-                            goldhover: '#C5A059', // Muted Gold Hover
-                            bg: '#F4F6F9',        // Soft Canvas Gray
-                            darkbg: '#060F23',    // Dark Section Canvas
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Site styles: compiled Tailwind CSS (rebuild steps in tailwind/README.md) -->
+    <link rel="stylesheet" href="Assets/css/dccpa.css">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -53,10 +32,16 @@
 
     <style>
         .gold-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+            background-image: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
         }
         .navy-gradient {
-            background: linear-gradient(135deg, #0B1B3D 0%, #1A2E5A 100%);
+            background-image: linear-gradient(135deg, #0B1B3D 0%, #1A2E5A 100%);
+        }
+        .hero-photo-overlay {
+            background-image: linear-gradient(90deg, rgba(6, 15, 35, 0.94) 0%, rgba(11, 27, 61, 0.84) 50%, rgba(11, 27, 61, 0.62) 100%);
+        }
+        @media (max-width: 1023px) {
+            .hero-photo-overlay { background: rgba(6, 15, 35, 0.84); }
         }
         .hero-overlay {
             background: radial-gradient(circle at center, rgba(11, 27, 61, 0.75) 0%, rgba(6, 15, 35, 0.95) 100%);
@@ -100,6 +85,7 @@
                 <div class="hidden lg:flex items-center space-x-7 text-sm font-semibold tracking-wide">
                     <a href="#about" class="hover:text-dccpa-gold transition-colors">About</a>
                     <a href="#curriculum" class="hover:text-dccpa-gold transition-colors">Curriculum</a>
+                    <a href="#gallery" class="hover:text-dccpa-gold transition-colors">Gallery</a>
                     <a href="#agencies" class="hover:text-dccpa-gold transition-colors">Agencies</a>
                     <a href="#requirements" class="hover:text-dccpa-gold transition-colors">Requirements</a>
                     <a href="#faq" class="hover:text-dccpa-gold transition-colors">FAQ</a>
@@ -121,6 +107,7 @@
         <div id="mobileMenu" class="hidden lg:hidden bg-dccpa-darkbg border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
             <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-dccpa-gold">About Program</a>
             <a href="#curriculum" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-dccpa-gold">15-Week Curriculum</a>
+            <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-dccpa-gold">Photo Gallery</a>
             <a href="#agencies" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-dccpa-gold">Participating Agencies</a>
             <a href="#requirements" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-dccpa-gold">Eligibility & Requirements</a>
             <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-200 hover:text-dccpa-gold">FAQ</a>
@@ -130,8 +117,9 @@
 
     <!-- Hero Section -->
     <section id="hero" class="relative bg-dccpa-navy text-white py-20 lg:py-28 overflow-hidden border-b border-slate-800">
-        <!-- Background Pattern & Overlay -->
-        <div class="absolute inset-0 hero-overlay z-0"></div>
+        <!-- Background Photo, Overlay & Pattern -->
+        <img src="Assets/images/web/hero-bountiful-night.jpg" alt="" aria-hidden="true" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-center z-0">
+        <div class="absolute inset-0 hero-photo-overlay z-0"></div>
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -229,6 +217,19 @@
                 </p>
             </div>
 
+            <!-- Photo Collage -->
+            <div class="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 gap-3 sm:gap-4 mb-14 md:h-[26rem]">
+                <div class="col-span-2 md:row-span-2 rounded-2xl overflow-hidden shadow-md h-56 sm:h-72 md:h-auto">
+                    <img src="Assets/images/web/class-laughing.jpg" alt="Academy students laughing during a classroom session" loading="lazy" class="w-full h-full object-cover object-center ">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md h-40 sm:h-48 md:h-auto">
+                    <img src="Assets/images/web/forensics-group-sm.jpg" alt="Class group photo holding their blood-spatter pattern papers" loading="lazy" class="w-full h-full object-cover object-[center_40%] ">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md h-40 sm:h-48 md:h-auto">
+                    <img src="Assets/images/web/student-vest-sm.jpg" alt="Smiling student wearing a tactical vest at the range" loading="lazy" class="w-full h-full object-cover object-[center_30%] ">
+                </div>
+            </div>
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-dccpa-bg p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-6 shadow-md">
@@ -298,8 +299,12 @@
             <div class="grid lg:grid-cols-3 gap-8" id="curriculumGrid">
                 
                 <!-- Category 1 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="Assets/images/web/patrol-traffic-stop-sm.jpg" alt="Students running a simulated traffic stop beside a Bountiful Police car" loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 pt-0 flex-1">
+                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4 -mt-6 relative ring-4 ring-white shadow-md">
                         <i class="fa-solid fa-car-on"></i>
                     </div>
                     <h4 class="text-lg font-bold text-dccpa-navy mb-2">Patrol & Field Operations</h4>
@@ -311,11 +316,16 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> DUI detection & field sobriety testing</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Ride-along orientation & safety training</li>
                     </ul>
+                    </div>
                 </div>
 
                 <!-- Category 2 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="Assets/images/web/k9-portrait-sm.jpg" alt="Police K9 lying attentively during a class demonstration" loading="lazy" class="w-full h-full object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 pt-0 flex-1">
+                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4 -mt-6 relative ring-4 ring-white shadow-md">
                         <i class="fa-solid fa-shield-cat"></i>
                     </div>
                     <h4 class="text-lg font-bold text-dccpa-navy mb-2">Specialized Units & Demos</h4>
@@ -327,11 +337,16 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Search & Rescue (SAR) capabilities</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Bomb squad & tactical equipment displays</li>
                     </ul>
+                    </div>
                 </div>
 
                 <!-- Category 3 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="Assets/images/web/sim-range-sm.jpg" alt="Students aiming training pistols at an interactive simulator screen" loading="lazy" class="w-full h-full object-cover object-[center_40%] group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 pt-0 flex-1">
+                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4 -mt-6 relative ring-4 ring-white shadow-md">
                         <i class="fa-solid fa-user-ninja"></i>
                     </div>
                     <h4 class="text-lg font-bold text-dccpa-navy mb-2">Tactical & EVOC Simulator</h4>
@@ -343,11 +358,16 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> EVOC emergency driving simulator</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Shoot / Don't Shoot interactive range exercise</li>
                     </ul>
+                    </div>
                 </div>
 
                 <!-- Category 4 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="Assets/images/web/forensics-spatter-sm.jpg" alt="Student in a protective suit creating blood-spatter patterns in the forensics tent" loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 pt-0 flex-1">
+                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4 -mt-6 relative ring-4 ring-white shadow-md">
                         <i class="fa-solid fa-fingerprint"></i>
                     </div>
                     <h4 class="text-lg font-bold text-dccpa-navy mb-2">Investigations & Forensics</h4>
@@ -359,11 +379,16 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Crime scene processing & evidence logging</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Narcotics & Special Victims Unit (SVU) briefs</li>
                     </ul>
+                    </div>
                 </div>
 
                 <!-- Category 5 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="Assets/images/web/handcuffing-demo-sm.jpg" alt="Officer demonstrating handcuffing technique on a student volunteer" loading="lazy" class="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 pt-0 flex-1">
+                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4 -mt-6 relative ring-4 ring-white shadow-md">
                         <i class="fa-solid fa-scale-balanced"></i>
                     </div>
                     <h4 class="text-lg font-bold text-dccpa-navy mb-2">Judicial System & Corrections</h4>
@@ -375,11 +400,16 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Constitutional law & search warrants</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> Davis County Jail facility walk-through</li>
                     </ul>
+                    </div>
                 </div>
 
                 <!-- Category 6 -->
-                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4">
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all overflow-hidden flex flex-col">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="Assets/images/web/fire-ladder-sm.jpg" alt="Firefighter waving from the top of a ladder truck" loading="lazy" class="w-full h-full object-cover object-[center_45%] group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 pt-0 flex-1">
+                    <div class="w-12 h-12 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-xl mb-4 -mt-6 relative ring-4 ring-white shadow-md">
                         <i class="fa-solid fa-headset"></i>
                     </div>
                     <h4 class="text-lg font-bold text-dccpa-navy mb-2">Dispatch & Fire / EMS Integration</h4>
@@ -391,8 +421,23 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> South Davis Metro Fire / EMS operations</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-dccpa-gold mr-2"></i> County-wide disaster & crisis management</li>
                     </ul>
+                    </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-20 bg-dccpa-navy text-white border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-dccpa-gold uppercase tracking-widest mb-2">From Past Classes</h2>
+                <h3 class="text-3xl sm:text-4xl font-black">See What Academy Nights Look Like</h3>
+                <p class="text-slate-300 mt-3 text-base">K9 demos, the range, the ladder truck, the forensics tent, and a lot of laughs along the way.</p>
+            </div>
+            <div id="galleryGrid" class="columns-2 md:columns-3 lg:columns-4 gap-3 sm:gap-4">
+                <!-- Populated by JS from galleryPhotos -->
             </div>
         </div>
     </section>
@@ -833,6 +878,17 @@
         </div>
     </footer>
 
+    <!-- Photo Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Photo viewer" onclick="if(event.target===this) closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white/80 hover:text-white text-3xl w-12 h-12" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <button onclick="stepLightbox(-1)" class="absolute left-2 sm:left-6 text-white/80 hover:text-white text-3xl w-12 h-12 bg-black/40 rounded-full" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+        <figure class="max-w-6xl w-full text-center">
+            <img id="lightboxImg" src="" alt="" class="max-h-[80vh] w-auto mx-auto rounded-xl shadow-2xl">
+            <figcaption id="lightboxCaption" class="text-slate-300 text-sm mt-4"></figcaption>
+        </figure>
+        <button onclick="stepLightbox(1)" class="absolute right-2 sm:right-6 text-white/80 hover:text-white text-3xl w-12 h-12 bg-black/40 rounded-full" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
     <!-- Submission Success Modal -->
     <div id="successModal" class="fixed inset-0 bg-dccpa-darkbg/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl border border-slate-200">
@@ -877,10 +933,70 @@
             { name: "South Davis Metro Fire", category: "fire", role: "EMS Operations & Technical Rescue", icon: "fa-fire-extinguisher" }
         ];
 
+        // Photo Gallery (files live in Assets/images/web/: NAME.jpg full size, NAME-sm.jpg thumbnail)
+        const galleryPhotos = [
+            { file: "k9-meet", alt: "Students meeting a police K9 outdoors" },
+            { file: "night-scenario", alt: "Night scenario training beside a patrol car with emergency lights" },
+            { file: "range-pistol", alt: "Students on the outdoor range with an instructor" },
+            { file: "fire-ladder-pair", alt: "Two students in turnout gear on the ladder truck" },
+            { file: "evidence-table", alt: "Evidence technician dusting items for fingerprints" },
+            { file: "swat-gear", alt: "Student trying on SWAT gear alongside a team member" },
+            { file: "k9-classroom", alt: "K9 search demonstration in front of the class" },
+            { file: "first-aid", alt: "Instructor demonstrating emergency first aid to the class" },
+            { file: "drones", alt: "Students examining police drones on a table" },
+            { file: "extrication-tool", alt: "Firefighter holding a hydraulic rescue tool at night" },
+            { file: "range-dusk", alt: "Students with SWAT instructors at the range at dusk" },
+            { file: "k9-centerville", alt: "K9 handler demonstration in the Centerville council room" },
+            { file: "sim-room", alt: "Students inside the use-of-force simulator room" },
+            { file: "student-police-vest", alt: "Student grinning in a police vest and ear protection" },
+            { file: "defensive-tactics", alt: "Officers demonstrating defensive tactics to a student" },
+            { file: "fire-forcible-entry", alt: "Student in turnout gear practicing forcible entry" },
+            { file: "k9-resting", alt: "Police K9 resting with its toy after a demonstration" },
+            { file: "swat-truck", alt: "SWAT team member showing equipment beside the armored truck" },
+            { file: "carport-scenario", alt: "Students practicing a traffic-stop scenario under the carport" }
+        ];
+        let lightboxIndex = 0;
+
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            grid.innerHTML = galleryPhotos.map((p, i) => `
+                <button type="button" onclick="openLightbox(${i})" class="block w-full mb-3 sm:mb-4 break-inside-avoid rounded-xl overflow-hidden border border-slate-700 hover:border-dccpa-gold focus:outline-none focus:ring-2 focus:ring-dccpa-gold transition-colors group" aria-label="View photo: ${p.alt}">
+                    <img src="Assets/images/web/${p.file}-sm.jpg" alt="${p.alt}" loading="lazy" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
+                </button>`).join('');
+        }
+        function openLightbox(i) {
+            lightboxIndex = i;
+            showLightboxPhoto();
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function showLightboxPhoto() {
+            const p = galleryPhotos[lightboxIndex];
+            const img = document.getElementById('lightboxImg');
+            img.src = `Assets/images/web/${p.file}.jpg`;
+            img.alt = p.alt;
+            document.getElementById('lightboxCaption').textContent = `${p.alt}  (${lightboxIndex + 1} of ${galleryPhotos.length})`;
+        }
+        function stepLightbox(d) {
+            lightboxIndex = (lightboxIndex + d + galleryPhotos.length) % galleryPhotos.length;
+            showLightboxPhoto();
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('lightbox').classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') stepLightbox(1);
+            if (e.key === 'ArrowLeft') stepLightbox(-1);
+        });
+
         let currentStep = 1;
 
         window.onload = function() {
             renderAgencies('all');
+            renderGallery();
             setupMobileMenu();
         };
 
