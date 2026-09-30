@@ -6,6 +6,19 @@ Bump it with every significant change that gets uploaded to GitHub:
 - **Major** (1.x → 2.0): a redesign or restructure of the site.
 - Typo fixes and tiny tweaks can ride along with the next version.
 
+## v1.2 (2026-09-29)
+- Application form security: added Cloudflare Turnstile human verification on step 3.
+- Apps Script backend hardened: the server checks each Turnstile token, including its hostname and action.
+  - It rate-limits submissions (20 per 10 min, 150 per day) and allows one application per email per 6 hours.
+  - It validates every field on the server.
+  - It refuses all submissions if not configured, rather than accepting unverified ones.
+- Secrets and settings moved to Apps Script Script Properties (nothing sensitive in GitHub).
+- Automatic daily cleanup of applications older than 365 days (configurable).
+- Clearer error messages for applicants (verification failed, duplicate, busy, etc.).
+- Participating Agencies: updated what Centerville, Bountiful, Farmington, Layton, West Bountiful and the Sheriff teach.
+- New curriculum photos for Patrol & Field Operations (night traffic stop) and Judicial System & Corrections (the Attorney General presenting); the previous two moved into the gallery.
+- Rewrote `apps-script/SETUP.md` with account security, Turnstile setup, and a plan for moving to daviscountycpa.org.
+
 ## v1.1 (2026-09-29)
 - Hero section: class photo background behind a navy overlay.
 - Curriculum: a photo on each of the six module cards.
