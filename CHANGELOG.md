@@ -6,6 +6,12 @@ Bump it with every significant change that gets uploaded to GitHub:
 - **Major** (1.x → 2.0): a redesign or restructure of the site.
 - Typo fixes and tiny tweaks can ride along with the next version.
 
+## v1.3 (2026-09-30)
+- Removed the handcuffing demo photo from the gallery (18 photos now).
+- Fixed a console warning: the Cloudflare Turnstile script now loads after the page script.
+- Added README.md, a plain-language guide to how the site is built.
+- Apps Script: alert emails now send through GmailApp instead of MailApp (Google was rejecting MailApp mail from the new Workspace account). Added a `sendTestEmail` admin function.
+
 ## v1.2 (2026-09-29)
 - Application form security: added Cloudflare Turnstile human verification on step 3.
 - Apps Script backend hardened: the server checks each Turnstile token, including its hostname and action.
