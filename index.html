@@ -24,8 +24,6 @@
     <!-- Site styles: compiled Tailwind CSS (rebuild steps in tailwind/README.md) -->
     <link rel="stylesheet" href="Assets/css/dccpa.css">
 
-    <!-- Cloudflare Turnstile (human verification for the application form) -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -878,7 +876,7 @@
             </div>
 
             <div class="border-t border-slate-800/80 pt-6 text-center md:flex md:justify-between text-slate-500">
-                <p>&copy; 2026 Davis County Citizens Police Academy (DCCPA). All rights reserved. <span class="text-slate-600">v1.2</span></p>
+                <p>&copy; 2026 Davis County Citizens Police Academy (DCCPA). All rights reserved. <span class="text-slate-600">v1.3</span></p>
                 <p class="mt-2 md:mt-0">Administered via Centerville Police Department</p>
             </div>
         </div>
@@ -951,7 +949,6 @@
             { file: "fire-ladder-pair", alt: "Two students in turnout gear on the ladder truck" },
             { file: "evidence-table", alt: "Evidence technician dusting items for fingerprints" },
             { file: "swat-gear", alt: "Student trying on SWAT gear alongside a team member" },
-            { file: "handcuffing-demo", alt: "Officer demonstrating handcuffing technique on a student volunteer" },
             { file: "first-aid", alt: "Instructor demonstrating emergency first aid to the class" },
             { file: "drones", alt: "Students examining police drones on a table" },
             { file: "extrication-tool", alt: "Firefighter holding a hydraulic rescue tool at night" },
@@ -1250,5 +1247,7 @@
             setTimeout(() => toast.remove(), 3000);
         }
     </script>
+    <!-- Cloudflare Turnstile (human verification for the application form); loaded after the main script so onTurnstileLoad exists -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
 </body>
 </html>
