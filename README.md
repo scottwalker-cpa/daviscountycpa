@@ -2,6 +2,7 @@
 
 **Live site:** https://daviscountycpa.com
 **Site admin:** Scott Walker (scott.walker@daviscountycpa.com)
+**Code repository:** https://github.com/scottwalker-cpa/daviscountycpa
 
 This is a plain guide to how the website works and where each piece lives.
 
@@ -24,8 +25,8 @@ Visitor  →  daviscountycpa.com (GitHub Pages)
 
 | Part | What it does | Where to find it |
 |---|---|---|
-| **Website files** | Everything visitors see: pages, photos, styling | This GitHub repository. Local copy: `D:\DCCPA Website` |
-| **Hosting** | Publishes the files as a website for free | GitHub Pages: in this repository, go to **Settings → Pages** |
+| **Website files** | Everything visitors see: pages, photos, styling | https://github.com/scottwalker-cpa/daviscountycpa. Local copy: `D:\DCCPA Website` |
+| **Hosting** | Publishes the files as a website for free | GitHub Pages: https://github.com/scottwalker-cpa/daviscountycpa/settings/pages |
 | **Domain name** | The address daviscountycpa.com | Squarespace Domains: https://account.squarespace.com/domains |
 | **Google Workspace** | The @daviscountycpa.com email accounts | https://admin.google.com |
 | **Applications Sheet** | Every submitted application, one row each | Google Drive (https://drive.google.com) → **DCCPA Applications** |
