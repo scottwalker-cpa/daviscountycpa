@@ -8,7 +8,7 @@ Bump it with every significant change that gets uploaded to GitHub:
 
 ## v1.3 (2026-09-30)
 - Participating Agencies: each card shows the agency's seal as a faded background, with an icon for the class that agency teaches. Web-sized seals are in `Assets/images/web/seals/`.
-- Removed the handcuffing demo photo from the gallery (18 photos now).
+- Removed the handcuffing demo photo from the gallery (18 photos now) and corrected 12 gallery photo captions.
 - Fixed a console warning: the Cloudflare Turnstile script now loads after the page script.
 - Added README.md, a plain-language guide to how the site is built.
 - Apps Script: alert emails now send through GmailApp instead of MailApp (Google was rejecting MailApp mail from the new Workspace account). Added a `sendTestEmail` admin function.
