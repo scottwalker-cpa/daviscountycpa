@@ -1,8 +1,8 @@
 # Davis County Citizens Police Academy Website
 
-**Live site:** https://daviscountycpa.com
-**Site admin:** Scott Walker (scott.walker@daviscountycpa.com)
-**Code repository:** https://github.com/scottwalker-cpa/daviscountycpa
+- **Live site:** https://daviscountycpa.com
+- **Site admin:** Scott Walker (scott.walker@daviscountycpa.com)
+- **Code repository:** https://github.com/scottwalker-cpa/daviscountycpa
 
 This is a plain guide to how the website works and where each piece lives.
 
