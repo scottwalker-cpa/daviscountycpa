@@ -7,6 +7,7 @@ Bump it with every significant change that gets uploaded to GitHub:
 - Typo fixes and tiny tweaks can ride along with the next version.
 
 ## v1.3 (2026-09-30)
+- Participating Agencies: each agency card now shows its official seal or badge (Davis County Attorney keeps an icon until a seal is available). Web-sized seals are in `Assets/images/web/seals/`.
 - Removed the handcuffing demo photo from the gallery (18 photos now).
 - Fixed a console warning: the Cloudflare Turnstile script now loads after the page script.
 - Added README.md, a plain-language guide to how the site is built.
