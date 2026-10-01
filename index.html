@@ -927,18 +927,18 @@
 
         // Participating Agencies Data Structure
         const agenciesData = [
-            { name: "Centerville Police", seal: "centerville", category: "city", role: "Host Administrative Agency, K9 Demo & Prosecutor Session", icon: "fa-building-shield" },
-            { name: "Bountiful Police", seal: "bountiful", category: "city", role: "High-Risk (Felony) Traffic Stops", icon: "fa-car" },
+            { name: "Centerville Police", seal: "centerville", category: "city", role: "Host Administrative Agency, K9 Demo & Prosecutor Session", icon: "fa-dog" },
+            { name: "Bountiful Police", seal: "bountiful", category: "city", role: "High-Risk (Felony) Traffic Stops", icon: "fa-car-on" },
             { name: "Clearfield Police", seal: "clearfield", category: "city", role: "Patrol & Traffic Stop Simulations", icon: "fa-car" },
             { name: "Clinton Police", seal: "clinton", category: "city", role: "Community Policing & School Safety", icon: "fa-user-shield" },
-            { name: "Farmington Police", seal: "farmington", category: "city", role: "Use of Force Training", icon: "fa-shield-halved" },
-            { name: "Kaysville Police", seal: "kaysville", category: "city", role: "Investigations & Forensics", icon: "fa-fingerprint" },
+            { name: "Farmington Police", seal: "farmington", category: "city", role: "Use of Force Training", icon: "fa-hand-fist" },
+            { name: "Kaysville Police", seal: "kaysville", category: "city", role: "Investigations & Forensics", icon: "fa-magnifying-glass" },
             { name: "Layton Police", seal: "layton", category: "city", role: "CSI Night: Fingerprints & Crime Scene Investigation", icon: "fa-fingerprint" },
             { name: "Syracuse Police", seal: "syracuse", category: "city", role: "Traffic Safety & EVOC Driving", icon: "fa-gauge-high" },
-            { name: "West Bountiful Police", seal: "west-bountiful", category: "city", role: "Drones, Speed Enforcement & Traffic Stops", icon: "fa-gauge-high" },
-            { name: "Davis County Sheriff", seal: "davis-county-sheriff", category: "county", role: "Davis County Jail Tours", icon: "fa-star" },
+            { name: "West Bountiful Police", seal: "west-bountiful", category: "city", role: "Drones, Speed Enforcement & Traffic Stops", icon: "fa-gauge-simple-high" },
+            { name: "Davis County Sheriff", seal: "davis-county-sheriff", category: "county", role: "Davis County Jail Tours", icon: "fa-building-lock" },
             { name: "Davis County Attorney", category: "county", role: "Prosecution & Judicial Overview", icon: "fa-scale-balanced" },
-            { name: "South Davis Metro Fire", seal: "south-davis-metro-fire", category: "fire", role: "EMS Operations & Technical Rescue", icon: "fa-fire-extinguisher" }
+            { name: "South Davis Metro Fire", seal: "south-davis-metro-fire", category: "fire", role: "EMS Operations & Technical Rescue", icon: "fa-truck-medical" }
         ];
 
         // Photo Gallery (files live in Assets/images/web/: NAME.jpg full size, NAME-sm.jpg thumbnail)
@@ -1018,17 +1018,14 @@
 
             filtered.forEach(agency => {
                 const card = document.createElement('div');
-                card.className = "bg-dccpa-bg rounded-2xl p-5 border border-slate-200 hover:border-dccpa-gold transition-all shadow-sm space-y-2";
+                card.className = "group relative overflow-hidden bg-dccpa-bg rounded-2xl p-5 border border-slate-200 hover:border-dccpa-gold transition-all shadow-sm space-y-2";
                 card.innerHTML = `
-                    ${agency.seal
-                        ? `<div class="w-24 h-24 bg-white rounded-xl border border-slate-200 shadow-sm flex items-center justify-center p-1.5 mb-3">
-                               <img src="Assets/images/web/seals/${agency.seal}.png" alt="${agency.name} seal" loading="lazy" class="max-w-full max-h-full object-contain">
-                           </div>`
-                        : `<div class="w-24 h-24 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-3xl mb-3">
-                               <i class="fa-solid ${agency.icon}"></i>
-                           </div>`}
-                    <h5 class="font-bold text-dccpa-navy text-sm">${agency.name}</h5>
-                    <p class="text-xs text-slate-500 leading-snug">${agency.role}</p>
+                    ${agency.seal ? `<img src="Assets/images/web/seals/${agency.seal}.png" alt="" aria-hidden="true" loading="lazy" class="absolute -right-3 top-1/2 -translate-y-1/2 h-32 w-32 object-contain opacity-[0.15] group-hover:opacity-25 transition-opacity duration-300 pointer-events-none select-none">` : ''}
+                    <div class="relative w-10 h-10 bg-dccpa-navy text-dccpa-gold rounded-xl flex items-center justify-center text-lg mb-2">
+                        <i class="fa-solid ${agency.icon}"></i>
+                    </div>
+                    <h5 class="relative font-bold text-dccpa-navy text-sm pr-20">${agency.name}</h5>
+                    <p class="relative text-xs text-slate-500 leading-snug pr-20">${agency.role}</p>
                 `;
                 grid.appendChild(card);
             });
