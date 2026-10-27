@@ -6,6 +6,14 @@ Bump it with every significant change that gets uploaded to GitHub:
 - **Major** (1.x → 2.0): a redesign or restructure of the site.
 - Typo fixes and tiny tweaks can ride along with the next version.
 
+## v1.4 (2026-10-27)
+Content updates from DCCPA staff review:
+- Removed things the academy no longer offers: EVOC driving, ride-alongs, Search & Rescue, bomb squad, narcotics/SVU briefs, the 911 dispatch tour, and the course binder.
+- Curriculum: "Tactical & EVOC Simulator" is now "Tactical & Use of Force"; "Dispatch & Fire / EMS Integration" is now "Fire / EMS Integration". Added high-risk stops, SWAT, drones, active attack response, VirTra simulator, and crimes against children.
+- Participating Agencies: updated what Bountiful, Clearfield, Clinton, Kaysville, Syracuse, West Bountiful, Centerville and the County Attorney teach. Added Children's Justice Center and SWAT Team cards.
+- FAQ: T-shirts are now presented at graduation; students wear their ID badge to sessions; up to three excused absences (was two).
+- Application form: address is now separate required Street, City and ZIP fields (ZIP must be 5 digits). They are combined into the existing "address" field on submit, so the Sheet and Apps Script are unchanged.
+
 ## v1.3 (2026-09-30)
 - Participating Agencies: each card shows the agency's seal as a faded background, with an icon for the class that agency teaches. Web-sized seals are in `Assets/images/web/seals/`.
 - Removed the handcuffing demo photo from the gallery (18 photos now) and corrected 12 gallery photo captions.
