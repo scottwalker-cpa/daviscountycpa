@@ -6,6 +6,10 @@ Bump it with every significant change that gets uploaded to GitHub:
 - **Major** (1.x → 2.0): a redesign or restructure of the site.
 - Typo fixes and tiny tweaks can ride along with the next version.
 
+## v1.5 (2026-10-27)
+- Participating Agencies: new Farmington Police seal (the 2024 silver badge, replacing the patch-and-badge photo). Added faded logos to the Davis County Attorney card (Davis County mark) and the Children's Justice Center card (the Utah CJC dandelion).
+- SWAT Team card still has no seal; waiting on a patch image from the team.
+
 ## v1.4 (2026-10-27)
 Content updates from DCCPA staff review:
 - Removed things the academy no longer offers: EVOC driving, ride-alongs, Search & Rescue, bomb squad, narcotics/SVU briefs, the 911 dispatch tour, and the course binder.
